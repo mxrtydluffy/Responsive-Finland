@@ -144,6 +144,32 @@
       transform: rotate(15deg);
     }
 
+    /* Tablets */
+    @media only screen and (max-width: 800px) {
+      .dashboard {
+        grid-template-areas: "t t t"
+                             "m m m"
+                             "p p p"
+                             "w l l"
+                             "g g g";
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+      }
+    }
+
+    /* Mobile */
+    @media only screen {
+      .dashboard {
+        grid-template-areas: "t t"
+                             "m c"
+                             "w l"
+                             "p p"
+                             "g g";
+      }
+    }
+
   </style>
 </head>
 <body>
