@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Finland</title>
   <style>
     some-element {
@@ -148,27 +149,32 @@
     @media only screen and (max-width: 800px) {
       .dashboard {
         grid-template-areas: "t t t"
-                             "m m m"
+                             "m m c"
                              "p p p"
                              "w l l"
                              "g g g";
         grid-template-columns: 1fr 1fr 1fr;
-        padding-left: 20px;
-        padding-right: 20px;
-        
+        padding-left: 18px;
+        padding-right: 18px;
+        grid-gap: 18px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 185px 185px 185px;
       }
     }
 
     /* Mobile */
-    @media only screen {
+    @media only screen and (max-width: 500px) {
       .dashboard {
         grid-template-areas: "t t"
                              "m c"
                              "w l"
                              "p p"
                              "g g";
-      }
-    }
+     grid-template-areas: 100px 185px 185px 185px;
+     grid-template-columns: 1fr 1fr;
+     grid-gap: 15px;
+    }    
+  }
 
   </style>
 </head>
